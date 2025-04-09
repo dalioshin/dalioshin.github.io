@@ -8,7 +8,7 @@ body {
 }
 
 /* CRT screen effect */
-body::after {
+/* body::after {
     content: "";
     position: fixed;
     top: 0;
@@ -23,7 +23,7 @@ body::after {
         transparent 2px
     );
     pointer-events: none;
-}
+} */
 
 h1, h2, h3 {
     font-family: 'Press Start 2P', cursive;
@@ -175,7 +175,6 @@ a:hover {
     margin: 5vh auto;
     border: 3px solid #FFB000;
     box-shadow: 0 0 30px #FFB000;
-    animation: crt-flicker 0.1s infinite alternate;
 }
 
 .fullscreen-caption {
@@ -201,10 +200,4 @@ a:hover {
 .close-btn:hover {
     color: #FF0000;
     transform: scale(1.2);
-}
-
-/* CRT flicker effect */
-@keyframes crt-flicker {
-    0% { opacity: 0.95; }
-    100% { opacity: 1; }
 }
