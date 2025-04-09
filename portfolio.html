@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>Portfolio</title>
 </head>
 <body>
@@ -19,11 +20,30 @@
         <h1>photos and renders</h1>
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="assets/images/star_system_uniform_color_size.png" alt="Exo Planet Star System Map">
+                <div class="image-container" onclick="openFullscreen('assets/images/star_system_uniform_color_size.png', 'exoplanet star system map')">
+                    <img src="assets/images/star_system_uniform_color_size.png" alt="Exo Planet Star System Map">
+                    <div class="image-label">exoplanet star system map</div>
+                </div>
+                <div class="project-description">
+                    <p>Each sphere represents a star system with an exoplanet. The view is centered on Earth.</p>
+                </div>
             </div>
             <div class="portfolio-item">
-                <img src="assets/images/first_render.png" alt="Test Render">
+                <div class="image-container"  onclick="openFullscreen('assets/images/first_render.png', 'test render')">
+                    <img src="assets/images/first_render.png" alt="Test Render">
+                    <div class="image-label">test render</div>
+                </div>
+                <div class="project-description">
+                    <p>Color and shape test render of star system representations.</p>
+                </div>
             </div>
+            </div>
+        </div>
+        <!-- Fullscreen viewer (must be in your HTML) -->
+        <div id="fullscreen-viewer" class="fullscreen-viewer">
+            <span class="close-btn" onclick="closeFullscreen()">&times;</span>
+            <img id="fullscreen-image" class="fullscreen-image">
+            <div id="fullscreen-caption" class="fullscreen-caption"></div>
         </div>
     </main>
 </body>
