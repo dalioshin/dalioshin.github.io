@@ -59,6 +59,7 @@ a:hover {
 
 /* Video container */
 .video-container {
+    /* position: relative; */
     border: 3px solid #FFB000;
     padding: 10px;
     margin: 20px auto;
@@ -153,6 +154,11 @@ a:hover {
 .form-button:hover {
     background: #FFB000;
     color: #000;
+}
+
+.frame-border {
+    border: 2px solid #FFB000;
+    margin-bottom: 10px;
 }
 
 /* Fullscreen viewer */
